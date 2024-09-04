@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  /* font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+  /* 
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem; /* 28px */
+}
+a {
+  font-size: 1.4rem /* 18px */;
+  line-height: 1.75rem; /* 28px */
+}
+body.day-mode {
+  background-color: #f2f2f2; /* Light background for day mode */
+  color: #333; /* Dark text color for better readability */
+}
+
+/* Night mode styling */
+body.night-mode {
+  background-color: #121212; /* Dark background for night mode */
+  color: #f2f2f2; /* Light text color for contrast */
+}
+
+/* .c-down-arrow {
+    transition: all 0.5s; 
+} */
+.btn:hover {
+  background-color: #ccc;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s;
+  transform: translateY(-2px);
+  cursor: pointer;
+  border: none;
+}
+.btn:hover .c-down-arrow {
+  transition: transform 0.3s; /* Correctly targets the transform property */
+  transform: rotate(180deg); /* Rotates the arrow by 180 degrees */
+}
+
+.main-container {
+  max-width: 70vw;
+}
+@media (max-width: 880px) {
+  .main-container {
+    max-width: 100%;
+  }
+}
+
+/* * contact page */
+
+@media (max-width: 768px) {
+  .bg-image {
+    background-image: url("../bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    backdrop-filter: blur(25px);
+  }
+  .custom-class {
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+/* ? rotate  */
+.c-rotate {
+  animation: rotate 1s infinite linear;
+}
+.c-animation {
+  transition: all 1s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ? for img */
+.up-down {
+  animation: up-down 2s linear infinite alternate;
+}
+@keyframes up-down {
+  from {
+    transform: translateY(10px);
+  }
+}
+/* ? for about for page */
+.radius{
+  border-radius: 0 200px 200px 0;
+}
+/* ? contact page */
+
+/* ? for github page */
+.radius-L {
+  border-radius: 200px 0 200px 0
+}
